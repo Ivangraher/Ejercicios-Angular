@@ -1,0 +1,28 @@
+<style>
+    table, th , td  {
+        border-collapse: collapse;
+        padding: 5px;
+    }
+</style>
+<div ng-app="ligaBaloncestoApp">
+    Canastas:
+    <input type="number" ng-model="canastasTotales" ng-change="canastas()"/>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Posicion</td>
+            <td>Canastas Totales</td>
+            <td>Asistencias Totales</td>
+            <td>Equipo</td>
+        </tr>
+        <tr ng-repeat="jugador in jugadores">
+            <td>{{jugador.nombre}}</td>
+            <td>{{jugador.posicion}}</td>
+            <td>{{jugador.canastasTotales}}</td>
+            <td>{{jugador.asistenciasTotales}}</td>
+            <td>{{jugador.equipo.nombre}}</td>
+
+        </tr>
+    </table>
+</div>
+
